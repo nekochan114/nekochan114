@@ -7,6 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dropdown_styles.css">
+  <link rel="stylesheet" href="hex_maniac_bw.css">
+  <link rel="stylesheet" href="visual_enhancements.css">
+  <link rel="stylesheet" href="unified_menu.css">
   <style>
     :root {
       --background-color: #000000;
@@ -1003,6 +1007,9 @@
   </style>
 </head>
 <body>
+  <!-- Fondo de Hex Maniac -->
+  <div class="hex-maniac-bg"></div>
+  
   <div id="particles-js"></div>
   
   <header class="header">
@@ -1011,10 +1018,50 @@
     </a>
     <nav>
       <ul class="nav-links">
-        <li><a href="https://twitch.tv/" class="nav-link">Twitch</a></li>
-        <li><a href="https://www.youtube.com/" class="nav-link">YouTube</a></li>
-        <li><a href="https://twitter.com/" class="nav-link">Twitter</a></li>
-        <li><a href="https://boards.4channel.org/a/catalog" class="nav-link">4chan</a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">Twitch <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-content">
+            <a href="https://twitch.tv/" class="dropdown-item">Página principal</a>
+            <a href="https://www.twitch.tv/directory" class="dropdown-item">Categorías</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://www.twitch.tv/directory/game/Just%20Chatting" class="dropdown-item">Just Chatting</a>
+            <a href="https://www.twitch.tv/directory/game/Minecraft" class="dropdown-item">Minecraft</a>
+            <a href="https://www.twitch.tv/directory/game/Fortnite" class="dropdown-item">Fortnite</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">YouTube <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-content">
+            <a href="https://www.youtube.com/" class="dropdown-item">Página principal</a>
+            <a href="https://www.youtube.com/feed/trending" class="dropdown-item">Tendencias</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://www.youtube.com/gaming" class="dropdown-item">Gaming</a>
+            <a href="https://www.youtube.com/music" class="dropdown-item">Música</a>
+            <a href="https://www.youtube.com/learning" class="dropdown-item">Aprendizaje</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">X.com <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-content">
+            <a href="https://x.com/" class="dropdown-item">Página principal</a>
+            <a href="https://x.com/explore" class="dropdown-item">Explorar</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://x.com/explore/tabs/trending" class="dropdown-item">Tendencias</a>
+            <a href="https://x.com/i/bookmarks" class="dropdown-item">Guardados</a>
+            <a href="https://x.com/settings/account" class="dropdown-item">Configuración</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="nav-link">4chan <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-content">
+            <a href="https://boards.4channel.org/a/catalog" class="dropdown-item">Anime & Manga</a>
+            <a href="https://boards.4channel.org/v/catalog" class="dropdown-item">Videojuegos</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://boards.4channel.org/g/catalog" class="dropdown-item">Tecnología</a>
+            <a href="https://boards.4channel.org/sci/catalog" class="dropdown-item">Ciencia</a>
+            <a href="https://boards.4channel.org/int/catalog" class="dropdown-item">Internacional</a>
+          </div>
+        </li>
       </ul>
     </nav>
   </header>
@@ -1035,21 +1082,41 @@
           <input type="text" class="search-input" placeholder="Search the web...">
           <button class="search-button">🔍</button>
         </div>
-        <div class="search-options">
-          <div class="search-option active" data-engine="google">Google</div>
-          <div class="search-option" data-engine="duckduckgo">DuckDuckGo</div>
-          <div class="search-option" data-engine="yandex">Yandex</div>
-          <div class="search-option" data-engine="bing">Bing</div>
+        <div class="unified-search-dropdown dropdown">
+          <div class="unified-search-option active">
+            <img src="search_animation.gif" alt="Search Options" class="search-gif">
+            <span class="dropdown-arrow">▼</span>
+            <div class="gif-instructions">Haz clic y mueve arriba/abajo para cambiar</div>
+          </div>
+          <div class="dropdown-content">
+            <div class="dropdown-section">
+              <div class="dropdown-section-title">Motor de búsqueda</div>
+              <div class="dropdown-item search-engine-option" data-engine="google">Google</div>
+              <div class="dropdown-item search-engine-option" data-engine="duckduckgo">DuckDuckGo</div>
+              <div class="dropdown-item search-engine-option" data-engine="yandex">Yandex</div>
+              <div class="dropdown-item search-engine-option" data-engine="bing">Bing</div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-section">
+              <div class="dropdown-section-title">Tipo de búsqueda</div>
+              <div class="dropdown-item search-type-item" data-type="web">Web</div>
+              <div class="dropdown-item search-type-item" data-type="images">Imágenes</div>
+              <div class="dropdown-item search-type-item" data-type="videos">Videos</div>
+              <div class="dropdown-item search-type-item" data-type="news">Noticias</div>
+            </div>
+          </div>
         </div>
-        <div class="search-type">
-          <div class="search-type-option active" data-type="web">Web</div>
-          <div class="search-type-option" data-type="images">Images</div>
-          <div class="search-type-option" data-type="videos">Videos</div>
-          <div class="search-type-option" data-type="news">News</div>
+        
+        <!-- Contenedor para subir imágenes (visible solo con Yandex + Imágenes) -->
+        <div class="image-upload-container" style="display: none;">
+          <label for="image-upload" class="image-upload-label">
+            <span>Subir imagen</span>
+            <input type="file" id="image-upload" accept="image/*">
+          </label>
         </div>
       </div>
       
-      <a href="#" class="button" id="login-button">Get Started</a>
+      <a href="#" class="button" id="login-button" style="display:none;">Get Started</a>
     </section>
 
     <div class="card-grid">
@@ -1073,7 +1140,7 @@
         <div class="image-container">
           <img src="https://i.postimg.cc/wvNqfw5q/Captura-de-pantalla-2024-08-21-215458.png" alt="Image">
         </div>
-        <h3 class="card-title">Twitter</h3>
+        <h3 class="card-title">X.com</h3>
         <p class="card-description">Stay updated with the latest trends</p>
       </div>
       
@@ -1131,9 +1198,9 @@
         <button class="preview-close">&times;</button>
       </div>
       <div class="preview-body">
-        <img src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt="YouTube Logo" class="preview-image">
+        <img src="youtube_logo.svg" alt="YouTube Logo" class="preview-image" style="background-color: #000; padding: 20px;">
         <p class="preview-description">
-          YouTube is an online video sharing and social media platform owned by Google. It is the second most-visited website, with more than one billion monthly users who collectively watch more than one billion hours of videos each day.
+          YouTube es una plataforma de compartición de videos y redes sociales propiedad de Google. Es el segundo sitio web más visitado, con más de mil millones de usuarios mensuales que colectivamente ven más de mil millones de horas de videos cada día.
         </p>
         <div class="preview-features">
           <div class="preview-feature">
@@ -1159,13 +1226,13 @@
   <div id="twitter-preview" class="preview-modal">
     <div class="preview-content">
       <div class="preview-header">
-        <h2 class="preview-title">Twitter</h2>
+        <h2 class="preview-title">X.com</h2>
         <button class="preview-close">&times;</button>
       </div>
       <div class="preview-body">
-        <img src="https://logos-world.net/wp-content/uploads/2020/04/Twitter-Logo.png" alt="Twitter Logo" class="preview-image">
+        <img src="x_logo.svg" alt="X.com Logo" class="preview-image" style="background-color: #000; padding: 20px;">
         <p class="preview-description">
-          Twitter is a microblogging and social networking service on which users post and interact with messages known as "tweets". Registered users can post, like, and retweet tweets, but unregistered users can only read them.
+          X.com (anteriormente Twitter) es una plataforma de redes sociales donde los usuarios publican e interactúan con mensajes cortos. Los usuarios registrados pueden publicar, dar me gusta y compartir mensajes, mientras que los usuarios no registrados solo pueden leerlos.
         </p>
         <div class="preview-features">
           <div class="preview-feature">
@@ -1221,30 +1288,7 @@
   </div>
 
   <!-- Login Modal -->
-  <div id="login-modal" class="login-modal">
-    <div class="login-content">
-      <button class="login-close">&times;</button>
-      <div class="login-header">
-        <h2 class="login-title">Welcome Back</h2>
-        <p class="login-subtitle">Sign in to access your dashboard</p>
-      </div>
-      <form class="login-form" id="login-form">
-        <div class="form-group">
-          <label for="username" class="form-label">Username</label>
-          <input type="text" id="username" class="form-input" placeholder="Enter your username" required>
-        </div>
-        <div class="form-group">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" id="password" class="form-input" placeholder="Enter your password" required>
-        </div>
-        <button type="submit" class="login-button">Sign In</button>
-      </form>
-      <div class="login-footer">
-        <a href="#" class="login-link">Forgot password?</a>
-        <a href="#" class="login-link">Create account</a>
-      </div>
-    </div>
-  </div>
+  <!-- Sistema de login eliminado -->
 
   <!-- Linux Terminal Interface -->
   <div class="terminal-container">
@@ -1273,6 +1317,7 @@
 
   <!-- Particles.js for dynamic background -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="dropdown.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Initialize particles.js
