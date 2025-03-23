@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="display:none;">
+  <!-- Google icon -->
+  <symbol id="icon-google" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.46 8.12h-2.19v1.88h2.19v1.88h-2.19v1.88h-1.88v-1.88h-2.19v-1.88h2.19v-1.88h1.88zm-7.62 0H6.73v1.88h3.11v1.88H6.73v1.88H4.85v-5.64h4.99v1.88z" fill="white"/>
+  </symbol>
+  
+  <!-- DuckDuckGo icon -->
+  <symbol id="icon-duckduckgo" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-5.5l4-4-4-4v8z" fill="white"/>
+  </symbol>
+  
+  <!-- Yandex icon -->
+  <symbol id="icon-yandex" viewBox="0 0 24 24">
+    <path d="M13.5 3L8 21h3l1.5-5h5l1.5 5h3L16.5 3h-3zm-0.25 4l1.75 6h-3.5l1.75-6z" fill="white"/>
+  </symbol>
+  
+  <!-- Bing icon -->
+  <symbol id="icon-bing" viewBox="0 0 24 24">
+    <path d="M5 3v12.5l3.5 1.5V12l7 3 3.5-1.5L9 9V6l5 2v2.5L5 3z" fill="white"/>
+  </symbol>
+</svg>

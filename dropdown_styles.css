@@ -1,0 +1,50 @@
+/* Estilos para menús desplegables */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--secondary-color);
+  min-width: 160px;
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius);
+  z-index: 10;
+  padding: 8px 0;
+  margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: var(--text-color);
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color var(--transition-speed);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 4px 0;
+}
+
+/* Estilos para el icono de flecha */
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.2s;
+}
+
+.dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
